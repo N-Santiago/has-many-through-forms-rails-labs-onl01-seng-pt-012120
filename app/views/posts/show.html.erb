@@ -14,6 +14,14 @@
 <% end %>
 </ul>
 
+<h4>Users Who Commented:<h/4>
+<ul>
+<% @post.users.distinct.each do |user| %>
+  <li>
+    <%= link_to user.username, user_path(user) %>
+  </li>
+<% end %>
+</ul>
     
 <h4>Add Comment:</h4>
 
